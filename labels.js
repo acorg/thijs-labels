@@ -41,30 +41,10 @@ function addLabel(sample, organ, medium){
         addTable();
     }
 
-    // table = $('#label-tables').children[tableCount];
     row = Math.floor(tableIndex / cols);
     col = tableIndex % cols;
-    content = '<span class="sample">' + sample + '</span><br><span class="organ">' + organ + '</span><br><span class="medium">' + medium + '</span>';
-    console.log('Adding label (' + row + ', ' + col + '): sample="' + sample + '", organ="' + organ + '", medium="' + medium + '".');
-
-    //console.log(row, col);
-    // console.log($('#label-tables table').last().find('tr :nth-child(' + (row + 1) + ')')[col]);//.find('td :nth-child(' + (col + 1) + ')'));
-
+    content = ('<span class="sample">' + sample + '</span><br><span class="organ">' +
+    	organ + '</span><br><span class="medium">' + medium + '</span>');
     $('#label-tables table').last()[0].querySelectorAll('tr')[row].querySelectorAll('td')[col].innerHTML = content;
-
-    try {
-        // console.log( $('#label-tables table').last()[0].querySelectorAll('tr')[row].querySelectorAll('td')[col].innerHTML(content) );
-    }
-    catch (e){
-        console.log(e);
-    }
-    /*
-    $($('#label-tables table').last().find('tr :nth-child(' + (row + 1) + ')')[col]).html(//.find('td :nth-child(' + (col + 1) + ')').html(
-        '<span class="sample">' + sample + '</span><br><span class="organ">' + organ + '</span><br><span class="medium">' + medium + '</span>');
-
-    $('#label-tables').children()[tableCount].children()[row].children()[col].html(
-        '<span class="sample">' + sample + '</span><span class="organ">' + organ + '</span><span class="medium">' + medium + '</span>'
-    );
-    */
     tableIndex++;
 }
