@@ -1,4 +1,4 @@
-var tableCount = -1, rows = 13, cols = 5, cells = rows * cols, tableIndex = cells;
+var tableCount, rows = 13, cols = 5, cells = rows * cols, tableIndex;
 
 $("#go").click(function(){
     var prefix = $.trim($('#prefix').val()),
@@ -6,6 +6,11 @@ $("#go").click(function(){
         organs = $('#organs').val().split(','),
         media = $('#media').val().split(','),
         i, sample;
+
+    // Remove any pre-existing label tables.
+    $('#label-tables table').remove();
+    tableCount = -1;
+    tableIndex = cells;
 
     for (i = 0; i < count; i++){
         organs.forEach(function(organ){
