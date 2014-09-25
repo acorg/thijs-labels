@@ -1,0 +1,50 @@
+/* CSS */
+@media print {
+    .labels {
+    	page-break-after: always;
+    }
+
+    form  {
+    	page-break-after: always;
+    	display: none;
+    }
+
+    table {
+    	border-style: none;
+    }
+
+    td {
+        border-style: none;
+    }
+}
+
+form {
+    margin-left: 70px;
+    margin-top: 40px;	
+}
+
+table {
+    border: 1px solid #eee;
+    margin-left: 70px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    width: 110px;
+    height: 50px;
+}
+
+.sample {
+    font-size: 0.9em;
+}
+
+.organ {
+    font-size: 0.85em;
+}
+
+.medium {
+    font-size: 0.85em;
+}
