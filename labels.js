@@ -28,7 +28,7 @@ $("#go").click(function(){
         }
     }
     catch(e){
-        console.log(e);
+        console.log(e.message);
     }
     return false;
 });
