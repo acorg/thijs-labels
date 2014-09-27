@@ -6,7 +6,7 @@ $("#go").click(function(){
             count = parseInt($.trim($('#count').val()), 10),
             organs = $('#organs').val().split(','),
             media = $('#media').val().split(','),
-            sampleWidth = Math.ceil(Math.log10(count)),
+            sampleWidth = Math.ceil(Math.log(count) / Math.LN10),
             i, sampleNumber;
 
         // Remove any pre-existing label tables.
